@@ -3,10 +3,10 @@ import tkinter as tk
 import requests
 import time
  
-
+apikey = "" # your apikey
 def getWeather(canvas):
     city = textField.get()
-    api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=5994170317a4c41ebab5fdf8776fd98d"
+    api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=" + apikey
     
     json_data = requests.get(api).json()
     condition = json_data['weather'][0]['main']
